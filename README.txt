@@ -1,7 +1,7 @@
 打包成可执行jar包（包含依赖的jar）
 #run.jar是以前在windows上打好的jar包,放在这里做个比较
 =====================================================================
-cd /Users/qhli/src/java/javase-core/javase-jar
+cd /Users/qhli/src/java/javase-jar
 #手动编译，会在当前目录下生成文件com/qhli/demo/javase/core/jar/Main.class
 #mvn clean compile
 
