@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+		<groupId>com.qhli.demo</groupId>
+
+		<version>0.0.1-SNAPSHOT</version>
+
+	<artifactId>javase-jar</artifactId>
+	<dependencies>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.2</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+	<plugins>
+	<plugin>
+		<groupId>org.codehaus.mojo</groupId>
+		<artifactId>exec-maven-plugin</artifactId>
+		<version>1.2.1</version>
+		<executions>
+			<execution>
+				<goals>
+					<goal>exec</goal>
+				</goals>
+			</execution>
+		</executions>
+		<configuration>
+			<executable>java</executable>
+			<arguments>
+				<argument>-classpath</argument>
+				<classpath>
+				</classpath>
+				<argument>com.qhli.demo.javase.core.jar.Main</argument>
+			</arguments>
+		</configuration>
+	</plugin>
+
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-jar-plugin</artifactId>
+			<configuration>
+				<archive>
+					<manifest>
+						<mainClass>com.qhli.demo.javase.core.jar.Main</mainClass>
+						<addClasspath>true</addClasspath>
+						<classpathPrefix>lib/</classpathPrefix>
+					</manifest>
+				</archive>
+				<classesDirectory>
+				</classesDirectory>
+			</configuration>
+		</plugin>
+	</plugins>
+	</build>
+</project>

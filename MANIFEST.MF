@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Created-By: liqh
+Main-Class: com.qhli.demo.javase.core.jar.Main
+Class-Path: ./ 
+ ./lib/commons-io-1.2.jar 
+ ./lib/commons-lang-2.4.jar 
+
+
